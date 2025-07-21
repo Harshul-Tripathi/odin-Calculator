@@ -32,7 +32,7 @@ document.querySelector(".equal").addEventListener("click", () => {
       .replace(/×/g, "*")
       .replace(/÷/g, "/");
     const result = eval(sanitizedExpression);
-    currentExpression = result.toString();
+    currentExpression = Number.isInteger(result) ? result.toString() : result.toFixed(3);
     updateDisplay();
     shouldResetDisplay = false;
   } catch {
