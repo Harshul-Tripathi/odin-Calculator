@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: white;
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  background-color: black;
+  border-radius: 20px;
+  padding: 1em;
+  gap: 1em;
+}
+
+#display {
+  width: 100%;
+  height: 70px;
+  background-color: black;
+  color: white;
+  font-size: 2.2em;
+  text-align: right;
+  padding: 0.4em 0.8em;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.mainRow {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+}
+
+.mainRow button {
+  flex: 1;
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  background-color: #a5a5a5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.rows {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rows button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  color: white;
+}
+
+.rows
+  button:not(.divide):not(.multiply):not(.subtract):not(.addition):not(.equal) {
+  background-color: #333;
+}
+
+.divide,
+.multiply,
+.subtract,
+.addition,
+.equal {
+  background-color: #f9a825;
+  color: white;
+}
+
+.rows button:hover,
+.mainRow button:hover {
+  filter: brightness(1.1);
+}
